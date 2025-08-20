@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-
+import Breadcrumbs from "./components/Breadcrumbs";
 
 export default function App() {
   return (
@@ -10,6 +10,9 @@ export default function App() {
           <nav>
             <ul className="hidden md:flex gap-6" role="menubar">
               <li role="none"><Link role="menuitem" to="/" className="hover:underline">Home</Link></li>
+              <li role="none"><Link role="menuitem" to="/rentals" className="hover:underline">Rentals</Link></li>
+              <li role="none"><Link role="menuitem" to="/booking" className="hover:underline">Booking</Link></li>
+              <li role="none"><Link role="menuitem" to="/faq" className="hover:underline">FAQ</Link></li>
             </ul>
           </nav>
           <Link to="/" className="rounded-lg bg-blue-600 text-white px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">Get a Quote</Link>
