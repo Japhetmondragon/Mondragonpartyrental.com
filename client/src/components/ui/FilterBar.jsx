@@ -79,7 +79,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
         <form onSubmit={handleSubmit} className="flex gap-3">
           <div className="flex-1 relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 text-teal-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
@@ -87,7 +87,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
               ref={searchInputRef}
               type="text"
               placeholder="Search rentals..."
-              className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-deep focus:border-teal-light transition-colors"
               value={localFilters.search}
               onChange={e => setLocalFilters(prev => ({ ...prev, search: e.target.value }))}
             />
@@ -95,7 +95,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
               <button
                 type="button"
                 onClick={() => setLocalFilters(prev => ({ ...prev, search: "" }))}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-teal-deep hover:text-teal-light"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -106,7 +106,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
 
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+            className="px-6 py-3 bg-teal-deep text-white rounded-xl font-medium hover:bg-teal-light focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-offset-2 transition-colors"
           >
             Search
           </button>
@@ -115,7 +115,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
             type="button"
             onClick={() => setIsExpanded(!isExpanded)}
             className={`px-4 py-3 border border-gray-300 rounded-xl font-medium transition-all ${
-              isExpanded ? 'bg-blue-50 border-blue-300 text-blue-700' : 'text-gray-700 hover:bg-gray-50'
+              isExpanded ? 'bg-cream-butter border-teal-pale-300 text-teal-deep' : 'text-teal-deep hover:bg-cream-butter'
             }`}
             aria-expanded={isExpanded}
             aria-label="Toggle advanced filters"
@@ -130,13 +130,13 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
       {/* Quick Category Filters */}
       <div className="p-4 border-b border-gray-100">
         <div className="flex flex-wrap gap-2">
-          <span className="text-sm font-medium text-gray-700 py-2">Categories:</span>
+          <span className="text-sm font-medium text-stone-mid py-2">Categories:</span>
           <button
             onClick={() => handleQuickFilter('category', '')}
             className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
               !localFilters.category 
-                ? 'bg-blue-100 text-blue-700 border border-blue-200' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-cream-butter text-teal-deep border border-cream-butter' 
+                : 'bg-gray-100 text-stone-mid hover:bg-gray-200'
             }`}
           >
             All
@@ -147,8 +147,8 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
               onClick={() => handleQuickFilter('category', category)}
               className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
                 localFilters.category === category
-                  ? 'bg-blue-100 text-blue-700 border border-blue-200'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-cream-butter text-teal-deep border border-cream-butter'
+                  : 'bg-gray-100 text-stone-mid hover:bg-gray-200'
               }`}
             >
               {category}
@@ -164,7 +164,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
         <form onSubmit={handleSubmit} className="p-4 bg-gray-50">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-stone-mid mb-2">
                 Price Range
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -174,7 +174,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
                     placeholder="Min $"
                     min="0"
                     step="5"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-deep focus:border-teal-deep text-sm"
                     value={localFilters.min}
                     onChange={e => setLocalFilters(prev => ({ ...prev, min: e.target.value }))}
                   />
@@ -185,7 +185,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
                     placeholder="Max $"
                     min="0"
                     step="5"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-deep focus:border-teal-deep text-sm"
                     value={localFilters.max}
                     onChange={e => setLocalFilters(prev => ({ ...prev, max: e.target.value }))}
                   />
@@ -194,11 +194,11 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-stone-mid mb-2">
                 Sort By
               </label>
               <select
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-deep focus:border-teal-deep text-sm"
                 value={localFilters.sort}
                 onChange={e => {
                   const newSort = e.target.value;
@@ -218,7 +218,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
             <div className="sm:col-span-2 lg:col-span-2 flex items-end gap-3">
               <button
                 type="submit"
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                className="px-6 py-2 bg-teal-deep text-white rounded-lg font-medium hover:bg-teal-light focus:outline-none focus:ring-2 focus:ring-teal-deep focus:ring-offset-2 transition-colors"
               >
                 Apply Filters
               </button>
@@ -227,7 +227,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="px-4 py-2 text-gray-600 hover:text-gray-800 font-medium transition-colors"
+                  className="px-4 py-2 text-teal-deep hover:text-teal-light font-medium transition-colors"
                 >
                   Clear All
                 </button>
@@ -240,7 +240,7 @@ export default function FilterBar({ value, onChange, totalResults = 0 }) {
       {/* Results Summary */}
       <div className="px-4 py-3 bg-gray-50 rounded-b-2xl">
         <div className="flex items-center justify-between text-sm">
-          <div className="text-gray-600">
+          <div className="text-stone-mid">
             {totalResults > 0 ? (
               <>Showing {totalResults} result{totalResults !== 1 ? 's' : ''}</>
             ) : (

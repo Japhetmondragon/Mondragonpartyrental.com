@@ -21,7 +21,7 @@ export default function Home() {
     {
       name: "Jennifer Williams",
       event: "Birthday Party",
-      text: "The team went above and beyond. Amazing quality rentals and the most reliable service in LA!",
+      text: "The team went above and beyond. Amazing quality rentals and the most reliable service in San Diego!",
       rating: 5
     }
   ];
@@ -36,20 +36,20 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Party Rentals & Catering in Los Angeles | LA Party & Catering"
-        description="Premium tents, tables, chairs, linens & catering. On-time delivery across Los Angeles. Get a fast quote today."
+        title="Party Rentals & Catering in San Diego | Party & Catering"
+        description="Premium tents, tables, chairs, linens & catering. On-time delivery across San Diego. Get a fast quote today."
         og={{ 
           title: "LA Party & Catering - Premium Event Rentals",
-          description: "Transform your events with premium rentals and reliable service in Los Angeles"
+          description: "Transform your events with premium rentals and reliable service in San Diego"
         }}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "name": "LA Party & Catering",
-          "description": "Premium party rentals and catering services in Los Angeles",
+          "name": "Mondragon Party Rentals & Catering",
+          "description": "Premium party rentals and catering services in San Diego",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Los Angeles",
+            "addressLocality": "San Diego",
             "addressRegion": "CA"
           },
           "telephone": "(555) 123-4567",
@@ -58,51 +58,51 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-teal-50">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-teal-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
         </div>
         
-        <div className="relative max-w-6xl mx-auto px-4 py-20 lg:py-28">
+        <div className="relative max-w-6xl mx-auto px-4 py-20 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl lg:text-6xl font-extrabold leading-tight">
+                <h1 className="bg-gradient-to-r from-teal-light to-teal-deep bg-clip-text text-transparent text-4xl lg:text-6xl font-extrabold leading-tight">
                   Party Rentals & Catering that{" "}
                   <span className="relative">
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-teal-mid to-teal-light bg-clip-text text-transparent">
                       show up on time.
                     </span>
                     <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 300 12" fill="none">
                       <path d="M2 10C100 2 200 2 298 10" stroke="url(#gradient)" strokeWidth="3" strokeLinecap="round"/>
                       <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#2563eb"/>
-                          <stop offset="100%" stopColor="#7c3aed"/>
+                          <stop offset="0%" stopColor="#6C8C88"/>
+                          <stop offset="100%" stopColor="#F6B68E"/>
                         </linearGradient>
                       </defs>
                     </svg>
                   </span>
                 </h1>
                 
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                  Friendly, reliable service for birthdays, weddings, and corporate events—any size, anywhere in LA.
+                <p className="text-xl text-stone-mid leading-relaxed max-w-lg">
+                  Friendly, reliable service for birthdays, weddings, and corporate events—any size, anywhere in San Diego.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/booking" 
-                  className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-teal-mid to-teal-deep rounded-xl font-semibold text-lg hover:from-teal-mid hover:to-teal-deep focus:outline-none focus:ring-2 focus:ring-teal-light focus:ring-offset-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  <span className="relative z-10">Get a Fast Quote</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10 text-white">Get a Fast Quote</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal-light to-teal-mid rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
                 
                 <Link 
                   to="/rentals" 
-                  className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold text-lg hover:border-blue-500 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 bg-white/80 backdrop-blur"
+                  className="px-8 py-4 border-2 border-gray-300 rounded-xl font-semibold text-lg hover:border-teal-light hover:text-teal-deep focus:outline-none focus:ring-2 focus:ring-teal-light focus:ring-offset-2 transition-all duration-300 bg-white/80 backdrop-blur"
                 >
                   Browse Rentals
                 </Link>
@@ -111,41 +111,41 @@ export default function Home() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-gray-600">Events Catered</div>
+                  <div className="text-3xl font-bold text-teal-deep">500+</div>
+                  <div className="text-sm text-stone-mid">Events Catered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">24hr</div>
-                  <div className="text-sm text-gray-600">Response Time</div>
+                  <div className="text-3xl font-bold text-teal-deep">24hr</div>
+                  <div className="text-sm text-stone-mid">Response Time</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">100%</div>
-                  <div className="text-sm text-gray-600">On-Time Delivery</div>
+                  <div className="text-3xl font-bold text-teal-deep">100%</div>
+                  <div className="text-sm text-stone-mid">On-Time Delivery</div>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl transform rotate-3 opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-peach-sunset to-teal-mid rounded-3xl transform rotate-3 opacity-20"></div>
               <img 
                 loading="lazy" 
                 alt="Elegant outdoor party setup with tent, tables, and chairs" 
-                className="relative w-full h-auto rounded-3xl shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500" 
-                src="/hero-party.jpg" 
+                className="bg-gradient-to-r from-teal-deep to-rosy-dusty bg-clip-text text-transparent relative w-full h-auto rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500" 
+                src="\3.png" 
               />
               
               {/* Floating elements */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-lg">
+              <div className="absolute top-14 -right-6 bg-white rounded-2xl p-4 shadow-lg">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-sm font-medium">Available Today</span>
+                  <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
+                  <span className=" bg-gradient-to-r from-teal-deep to-peach-sunset bg-clip-text text-transparent text-sm font-medium">Available Today</span>
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-lg">
+              <div className="absolute bottom-14 -left-6 bg-white rounded-2xl p-4 shadow-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">4.9★</div>
-                  <div className="text-xs text-gray-500">Customer Rating</div>
+                  <div className="text-2xl font-bold text-peach-sunset">4.9★</div>
+                  <div className="text-xs text-stone-mid">Customer Rating</div>
                 </div>
               </div>
             </div>
@@ -157,10 +157,10 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose LA Party & Catering?
+            <h2 className="text-4xl font-bold text-teal-deep mb-4">
+              Why Choose Mondragon Party Rentals & Catering?
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-stone-mid max-w-2xl mx-auto">
               We're not just another rental company. We're your event success partners.
             </p>
           </div>
@@ -203,36 +203,36 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-teal-deep mb-4">
               Popular Rental Categories
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-stone-mid">
               Everything you need for your perfect event
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <CategoryCard 
-              title="Tents & Canopies"
-              image="/category-tents.jpg"
+              title="Themed and Specialty Rentals"
+              image="/5.png"
               description="Weather protection with style"
               href="/rentals?category=Tents"
             />
             <CategoryCard 
               title="Tables & Chairs"
-              image="/category-tables.jpg" 
+              image="/3.png" 
               description="Seating for every occasion"
               href="/rentals?category=Tables"
             />
             <CategoryCard 
               title="Linens & Décor"
-              image="/category-linens.jpg"
+              image="/4.png"
               description="Transform your space"
               href="/rentals?category=Linens"
             />
             <CategoryCard 
-              title="Heating & Cooling"
-              image="/category-heaters.jpg"
+              title="Outdoor & Ceremony"
+              image="/2.png"
               description="Comfort in any weather"
               href="/rentals?category=Heaters"
             />
@@ -243,12 +243,12 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-16">
+          <h2 className="text-4xl font-bold text-teal-deep mb-16">
             What Our Clients Say
           </h2>
           
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 lg:p-12">
+            <div className="bg-gradient-to-br from-teal-50 to-cream-butter rounded-2xl p-8 lg:p-12">
               <div className="max-w-3xl mx-auto">
                 <div className="flex justify-center mb-6">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
@@ -258,15 +258,15 @@ export default function Home() {
                   ))}
                 </div>
                 
-                <blockquote className="text-xl lg:text-2xl text-gray-700 mb-6 italic">
+                <blockquote className="text-xl lg:text-2xl text-stone-mid mb-6 italic">
                   "{testimonials[currentTestimonial].text}"
                 </blockquote>
                 
                 <div>
-                  <div className="font-semibold text-gray-900">
+                  <div className="font-semibold text-teal-deep">
                     {testimonials[currentTestimonial].name}
                   </div>
-                  <div className="text-gray-600">
+                  <div className="text-stone-mid">
                     {testimonials[currentTestimonial].event}
                   </div>
                 </div>
@@ -280,7 +280,7 @@ export default function Home() {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
+                    index === currentTestimonial ? 'bg-teal-deep' : 'bg-gray-300'
                   }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
@@ -291,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-teal-deep to-peach-sunset">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Ready to Make Your Event Unforgettable?
@@ -303,15 +303,15 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/booking"
-              className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="px-8 py-4 bg-white rounded-xl font-semibold text-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-deep transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get Your Quote Now
             </Link>
             <Link 
               to="/rentals"
-              className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-300"
+              className="group px-8 py-4 border-2 border-white rounded-xl font-semibold text-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-teal-deep transition-all duration-300"
             >
-              Browse Our Inventory
+              <span className="text-white group-hover:text-teal-mid">Browse Our Inventory</span>
             </Link>
           </div>
         </div>
@@ -323,11 +323,11 @@ export default function Home() {
 function FeatureCard({ icon, title, description }) {
   return (
     <div className="group text-center p-8 rounded-2xl bg-white shadow-sm border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-      <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+      <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-pale text-teal-deep rounded-xl mb-6 group-hover:bg-teal-mid group-hover:text-white transition-colors duration-300">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+      <h3 className="text-xl font-semibold text-teal-deep mb-3">{title}</h3>
+      <p className="text-stone-mid leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -346,8 +346,8 @@ function CategoryCard({ title, image, description, href }) {
         />
       </div>
       <div className="p-6">
-        <h3 className="font-semibold text-lg text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{title}</h3>
-        <p className="text-gray-600 text-sm">{description}</p>
+        <h3 className="font-semibold text-lg text-teal-deep mb-2 group-hover:text-teal-light transition-colors">{title}</h3>
+        <p className="text-stone-mid text-sm">{description}</p>
       </div>
     </Link>
   );

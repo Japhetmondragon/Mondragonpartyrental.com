@@ -100,14 +100,14 @@ export default function Rentals() {
   // Error state component
   const ErrorState = () => (
     <div className="text-center py-16">
-      <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-16 h-16 text-teal-deep mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
-      <h3 className="text-lg font-medium text-gray-900 mb-2">Something went wrong</h3>
-      <p className="text-gray-600 mb-4">We couldn't load the rentals. Please try again.</p>
+      <h3 className="text-lg font-medium text-teal-deep mb-2">Something went wrong</h3>
+      <p className="text-stone-mid mb-4">We couldn't load the rentals. Please try again.</p>
       <button 
         onClick={() => window.location.reload()}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        className="px-4 py-2 bg-teal-deep text-white rounded-lg hover:bg-teal-light transition-colors"
       >
         Try Again
       </button>
@@ -117,16 +117,16 @@ export default function Rentals() {
   // Empty state component
   const EmptyState = () => (
     <div className="text-center py-16">
-      <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-16 h-16 text-teal-deep mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
-      <h3 className="text-lg font-medium text-gray-900 mb-2">No items found</h3>
-      <p className="text-gray-600 mb-4">
+      <h3 className="text-lg font-medium text-teal-deep mb-2">No items found</h3>
+      <p className="text-stone-mid mb-4">
         Try adjusting your filters or search terms to find what you're looking for.
       </p>
       <button 
         onClick={() => setParams({ page: 1, limit: 24, category: "", min: "", max: "", search: "", sort: "" })}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        className="px-4 py-2 bg-teal-deep text-white rounded-lg hover:bg-teal-light transition-colors"
       >
         Clear All Filters
       </button>
@@ -140,10 +140,10 @@ export default function Rentals() {
   return (
     <>
       <SEO
-        title={`Party Rentals ${params.category ? `- ${params.category}` : ''} | LA Party & Catering`}
-        description={`Browse our extensive collection of party rentals including tents, tables, chairs, and more. Professional event equipment in Los Angeles.`}
+        title={`Party Rentals ${params.category ? `- ${params.category}` : ''} | San Diego Party & Catering`}
+        description={`Browse our extensive collection of party rentals including tents, tables, chairs, and more. Professional event equipment in San Diego.`}
         og={{
-          title: `Party Rentals${params.category ? ` - ${params.category}` : ''} in Los Angeles`,
+          title: `Party Rentals${params.category ? ` - ${params.category}` : ''} in San Diego`,
           description: "Premium event rental equipment for any occasion"
         }}
       />
@@ -153,24 +153,24 @@ export default function Rentals() {
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              <h1 className="text-3xl font-bold text-teal-deep mb-2">
                 {params.category ? `${params.category} Rentals` : 'All Rentals'}
               </h1>
-              <p className="text-gray-600">
+              <p className="text-stone-mid">
                 Professional-grade equipment for your perfect event
               </p>
             </div>
 
             {/* View Mode Toggle */}
             <div className="flex items-center gap-3">
-              <span className="text-sm text-gray-600">View:</span>
+              <span className="text-sm text-stone-mid">View:</span>
               <div className="flex border border-gray-300 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     viewMode === 'grid'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                      ? 'bg-teal-deep text-white'
+                      : 'bg-white text-teal-deep hover:bg-cream-butter'
                   }`}
                   aria-label="Grid view"
                 >
@@ -182,8 +182,8 @@ export default function Rentals() {
                   onClick={() => setViewMode('list')}
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     viewMode === 'list'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                      ? 'bg-teal-deep text-white'
+                      : 'bg-white text-teal-deep hover:bg-cream-butter'
                   }`}
                   aria-label="List view"
                 >
@@ -202,13 +202,13 @@ export default function Rentals() {
                 <li>
                   <button 
                     onClick={() => setParams(prev => ({ ...prev, category: "", page: 1 }))}
-                    className="text-blue-600 hover:text-blue-800 hover:underline"
+                    className="text-teal-deep hover:text-teal-light hover:underline"
                   >
                     All Rentals
                   </button>
                 </li>
                 <li className="text-gray-400">›</li>
-                <li className="text-gray-900 font-medium">{params.category}</li>
+                <li className="text-teal-deep font-medium">{params.category}</li>
               </ol>
             </nav>
           )}
@@ -254,7 +254,7 @@ export default function Rentals() {
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-200">
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-stone-mid">
                   Showing {((currentPage - 1) * params.limit) + 1} to {Math.min(currentPage * params.limit, totalResults)} of {totalResults} results
                 </div>
                 

@@ -1,7 +1,7 @@
 export default function Button({ children, variant="primary", size="md", fullWidth=false, className="", ...props }) {
   const base = "font-display uppercase tracking-wide inline-flex items-center justify-center rounded-xl transition duration-200";
   const variants = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
+    primary: "bg-teal-deep text-white hover:bg-teal-light",
     outline: "border border-neutral-300 text-neutral-800 hover:bg-neutral-50",
     ghost:   "text-neutral-700 hover:bg-neutral-100"
   };

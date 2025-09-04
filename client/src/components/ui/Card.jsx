@@ -20,7 +20,7 @@ export default function Card({ item }) {
   };
 
   return (
-    <article className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2">
+    <article className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus-within:ring-2 focus-within:ring-teal-light focus-within:ring-offset-2">
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
         <Link to={`/rentals/${item.slug}`} className="block h-full">
@@ -68,7 +68,7 @@ export default function Card({ item }) {
         {/* In cart indicator */}
         {isInCart && (
           <div className="absolute bottom-3 left-3">
-            <div className="flex items-center gap-1 px-2 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
+            <div className="flex items-center gap-1 px-2 py-1 bg-teal-400 text-white text-xs font-medium rounded-full">
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -81,7 +81,7 @@ export default function Card({ item }) {
       {/* Content */}
       <div className="p-5">
         <div className="mb-3">
-          <h2 className="font-semibold text-lg text-gray-900 leading-tight mb-1 group-hover:text-blue-600 transition-colors">
+          <h2 className="font-semibold text-lg text-gray-900 leading-tight mb-1 group-hover:text-teal-600 transition-colors">
             <Link to={`/rentals/${item.slug}`} className="hover:underline">
               {item.name}
             </Link>
@@ -120,7 +120,7 @@ export default function Card({ item }) {
                 ? 'bg-green-50 text-green-700 border border-green-200 hover:bg-green-100 focus:ring-green-500'
                 : isAdding
                 ? 'bg-blue-400 text-white cursor-not-allowed'
-                : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-md focus:ring-blue-500'
+                : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-md focus:ring-teal-light'
             }`}
           >
             {isAdding ? (
@@ -150,7 +150,7 @@ export default function Card({ item }) {
 
           <Link 
             to="/booking"
-            className="px-4 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300"
+            className="px-4 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium hover:border-teal-light hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-teal-light focus:ring-offset-2 transition-all duration-300"
             aria-label="Go to checkout"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
